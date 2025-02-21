@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('NPM Install') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Run npm audit') {
             steps {
-                sh 'npm audit'
+                bat 'npm audit'
             }
         }
         stage('Run Integration tests') {
             steps {
-                sh 'npm run test'
+                bat 'npm run test'
             }
         }
         stage('Deploy to STAGING') {
